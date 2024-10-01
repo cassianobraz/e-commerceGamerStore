@@ -1,28 +1,24 @@
-import type { Metadata } from "next";
-import { Montserrat } from "next/font/google";
-import "./globals.css";
+import type { Metadata } from 'next'
+import './globals.css'
+import { Montserrat } from 'next/font/google'
 
 const font = Montserrat({
-  subsets: [ "latin" ],
+  subsets: [ 'latin' ],
 })
 
 export const metadata: Metadata = {
-  title: "Gam3r.store",
-  description: "Versão completa da loja Gam3r.store",
-};
+  title: 'Gam3r.store',
+  description: 'Versão completa da loja Gam3r.store',
+}
 
 export default function RootLayout({
   children,
 }: Readonly<{
-  children: React.ReactNode;
+  children: React.ReactNode
 }>) {
   return (
     <html lang="pt-BR">
-      <body
-        className={font.className}
-      >
-        {children}
-      </body>
+      <body className={font.className}>{children}</body>
     </html>
-  );
+  )
 }
